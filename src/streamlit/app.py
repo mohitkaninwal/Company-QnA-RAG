@@ -1,13 +1,7 @@
-import os
 import streamlit as st
-from dotenv import load_dotenv
-from pinecone import Pinecone
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_pinecone import PineconeVectorStore
-from langchain_groq import ChatGroq
-from config import EMBEDDING_MODEL,PINECONE_API_KEY,INDEX_NAME,GROQ_API_KEY,LLM_MODEL
 from src.utils.pinecone_utils import initialize_pinecone,initialize_vectorstore
 from src.utils.llm_utils import initialize_llm,format_polite_response
+
 
 def main():
     st.set_page_config(page_title="Nickelfox Knowledge Assistant", page_icon="🦊", layout="wide")

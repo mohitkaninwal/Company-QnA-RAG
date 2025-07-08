@@ -1,13 +1,10 @@
 import os
-import hashlib
 from glob import glob
 from uuid import uuid4
 from dotenv import load_dotenv
-from pinecone import Pinecone, ServerlessSpec
-from langchain_community.document_loaders import PyPDFLoader, TextLoader, Docx2txtLoader, CSVLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
-from config import PINECONE_API_KEY,INDEX_NAME,EMBEDDING_DIM,MAX_INPUT_TOKENS,EMBEDDING_MODEL,ALLOWED_EXT,DOCS_DIR,CHUNK_OVERLAP,CHUNK_SIZE
+from config import INDEX_NAME,MAX_INPUT_TOKENS,EMBEDDING_MODEL,ALLOWED_EXT,DOCS_DIR,CHUNK_OVERLAP,CHUNK_SIZE
 from src.embedding.setup_pinecone import pc
 from src.documentLoader.docLoader import file_hash,get_loader,truncate_text,chunk_hash
 load_dotenv()

@@ -1,8 +1,5 @@
 # ========== HELPERS ==========
-import os
 import hashlib
-from glob import glob
-from uuid import uuid4
 from config import MAX_INPUT_TOKENS
 from langchain_community.document_loaders import PyPDFLoader, TextLoader, Docx2txtLoader, CSVLoader
 

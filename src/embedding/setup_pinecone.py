@@ -1,5 +1,3 @@
-
-import os
 from pinecone import Pinecone,ServerlessSpec
 from config import INDEX_NAME,EMBEDDING_DIM,PINECONE_API_KEY
 pc = Pinecone(api_key=PINECONE_API_KEY)
