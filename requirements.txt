@@ -1,0 +1,8 @@
+langchain
+dotenv
+pinecone
+sentence-transformers
+streamlit
+groq
+pyPDF2
+openpyxl
