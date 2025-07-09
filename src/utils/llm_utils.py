@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_groq import ChatGroq
 from config import GROQ_API_KEY, LLM_MODEL
-from src.prompts.system_prompt import system_prompt
+from src.prompts.system_prompt import SYSTEM_PROMPT
 def initialize_llm():
     try:
         return ChatGroq(api_key=GROQ_API_KEY, model=LLM_MODEL)
@@ -12,7 +12,7 @@ def initialize_llm():
 def format_polite_response(context, query, llm):
 
     try:
-        system_prompt = system_prompt.format(context=context, query=query)
+        system_prompt = SYSTEM_PROMPT.format(context=context, query=query)
         response = llm.invoke(system_prompt)
         return response.content if hasattr(response, 'content') else str(response)
     except Exception as e:
