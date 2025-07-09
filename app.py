@@ -4,8 +4,8 @@ from src.utils.llm_utils import initialize_llm,format_polite_response
 
 
 def main():
-    st.set_page_config(page_title="Nickelfox Knowledge Assistant", page_icon="🦊", layout="wide")
-    st.title("🦊 Nickelfox Knowledge Assistant")
+    st.set_page_config(page_title="Company Knowledge Assistant", page_icon="💼", layout="wide")
+    st.title("Company Knowledge Assistant")
     st.markdown("*Your friendly AI assistant for company policies, procedures, and documentation*")
 
     # Initialize backend
@@ -75,7 +75,7 @@ def main():
     with st.sidebar:
         st.header("ℹ️ About This Assistant")
         st.info(
-            "This AI assistant has access to your Nickelfox's knowledge base, including employee handbook, policies, SOPs, and HR guidelines. "
+            "This AI assistant has access to your Company's knowledge base, including employee handbook, policies, SOPs, and HR guidelines. "
             "Simply ask your questions in natural language!"
         )
         st.header("💡 Tips for Better Results")
@@ -89,7 +89,7 @@ def main():
         if st.button("🗑️ Clear Chat History"):
             st.session_state.messages = []
             st.rerun()
-        st.markdown("---\n*Built with ❤️ for NICKELFOX team*")
+        st.markdown("---\n*Built with ❤️ by MOHIT*")
 
 if __name__ == "__main__":
     main()
