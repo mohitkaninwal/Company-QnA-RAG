@@ -7,3 +7,5 @@ groq
 pyPDF2
 openpyxl
 langchain-huggingface
+langchain_groq
+langchain_pinecone
